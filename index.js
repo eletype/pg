@@ -58,6 +58,8 @@ var PgDriver = Base.extend({
 
   mapDataType: function (str) {
     switch (str) {
+      case 'text[]':
+        return 'TEXT[]';
       case 'json':
       case 'jsonb':
         return str.toUpperCase();
